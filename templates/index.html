@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        EduGenie - AI Learning Assistant
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            AI POWERED LEARNING
+        </span>
+
+        <h1>
+            EduGenie
+        </h1>
+
+        <p>
+            Ask. Understand. Practise. Learn.
+        </p>
+
+    </div>
+
+
+    <div class="status">
+
+        <span
+            id="statusDot"
+            class="status-dot"
+        ></span>
+
+        <span id="statusText">
+            Checking server...
+        </span>
+
+    </div>
+
+</header>
+
+
+
+<main class="container">
+
+
+<section class="welcome card">
+
+    <h2>
+        Your Personal AI Learning Assistant
+    </h2>
+
+    <p>
+        EduGenie helps students understand concepts,
+        ask questions, generate quizzes, summarize
+        study material and create personalized
+        learning paths.
+    </p>
+
+</section>
+
+
+
+<section class="card">
+
+    <label for="task">
+        Choose a Task
+    </label>
+
+
+    <select id="task">
+
+        <option value="qa">
+            Ask a Question
+        </option>
+
+        <option value="explain">
+            Explain a Topic
+        </option>
+
+        <option value="quiz">
+            Generate Quiz
+        </option>
+
+        <option value="summarize">
+            Summarize Text
+        </option>
+
+        <option value="learn">
+            Learning Path
+        </option>
+
+    </select>
+
+
+
+    <div
+        id="quizCountWrap"
+        class="hidden"
+    >
+
+        <label for="quizCount">
+            Number of Questions
+        </label>
+
+        <input
+            id="quizCount"
+            type="number"
+            value="5"
+            min="1"
+            max="10"
+        >
+
+    </div>
+
+
+
+    <label for="inputText">
+        Enter Your Question / Topic
+    </label>
+
+
+    <textarea
+        id="inputText"
+        placeholder="Example: Explain Python variables"
+    ></textarea>
+
+
+
+    <button
+        id="submitBtn"
+        class="primary"
+    >
+        Generate Answer
+    </button>
+
+
+    <button
+        id="clearBtn"
+        class="secondary"
+    >
+        Clear
+    </button>
+
+
+    <div
+        id="loading"
+        class="loading hidden"
+    >
+        EduGenie is thinking...
+    </div>
+
+
+    <div
+        id="error"
+        class="error hidden"
+    ></div>
+
+
+</section>
+
+
+
+<section
+    id="resultCard"
+    class="card hidden"
+>
+
+    <div class="result-header">
+
+        <h2>
+            Result
+        </h2>
+
+        <button
+            id="copyBtn"
+            class="secondary small"
+        >
+            Copy
+        </button>
+
+    </div>
+
+
+    <div id="result"></div>
+
+</section>
+
+
+
+<section
+    id="quizCard"
+    class="card hidden"
+>
+
+    <div class="result-header">
+
+        <h2>
+            Quiz
+        </h2>
+
+        <span id="score"></span>
+
+    </div>
+
+
+    <div id="quiz"></div>
+
+
+    <button
+        id="checkQuizBtn"
+        class="primary hidden"
+    >
+        Check Answers
+    </button>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        EduGenie • AI Learning Assistant
+    </p>
+
+</footer>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>

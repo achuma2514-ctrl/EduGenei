@@ -1,0 +1,439 @@
+:root {
+
+    --background: #f5f7fb;
+
+    --card: #ffffff;
+
+    --text: #172033;
+
+    --muted: #667085;
+
+    --primary: #5b4bdb;
+
+    --primary-dark: #4435b7;
+
+    --border: #e5e7eb;
+
+    --success: #168a57;
+
+    --danger: #c0392b;
+
+    --shadow:
+        0 12px 35px rgba(25, 32, 56, 0.08);
+}
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+
+}
+
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #5b4bdb,
+            #7d5ee8
+        );
+
+    color: white;
+
+    padding: 45px 20px;
+
+}
+
+
+.hero-content {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+}
+
+
+.badge {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+h1 {
+
+    margin: 5px 0;
+
+    font-size: 60px;
+
+}
+
+
+.hero p {
+
+    margin: 0;
+
+    font-size: 18px;
+
+}
+
+
+.status {
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 40px;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.15);
+
+}
+
+
+.status-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    display: inline-block;
+
+    background: #ffd166;
+
+    border-radius: 50%;
+
+    margin-right: 7px;
+
+}
+
+
+.container {
+
+    width:
+        min(
+            1050px,
+            calc(100% - 30px)
+        );
+
+    margin: 30px auto 50px;
+
+}
+
+
+.card {
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.welcome {
+
+    border-left:
+        5px solid var(--primary);
+
+}
+
+
+label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin:
+        15px 0 7px;
+
+}
+
+
+select,
+textarea,
+input[type="number"] {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+}
+
+
+textarea {
+
+    min-height: 160px;
+
+    resize: vertical;
+
+}
+
+
+button {
+
+    border: 0;
+
+    border-radius: 11px;
+
+    padding:
+        12px 18px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin:
+        15px 8px 0 0;
+
+}
+
+
+.primary {
+
+    background:
+        var(--primary);
+
+    color: white;
+
+}
+
+
+.primary:hover {
+
+    background:
+        var(--primary-dark);
+
+}
+
+
+.secondary {
+
+    background:
+        #eef0f7;
+
+    color: var(--text);
+
+}
+
+
+.small {
+
+    padding:
+        8px 12px;
+
+    margin: 0;
+
+}
+
+
+.loading {
+
+    color:
+        var(--primary);
+
+    font-weight: bold;
+
+    margin-top: 15px;
+
+}
+
+
+.error {
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #fff0ee;
+
+    color: var(--danger);
+
+}
+
+
+.result-header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+}
+
+
+#result {
+
+    white-space:
+        pre-wrap;
+
+    margin-top: 15px;
+
+}
+
+
+.quiz-question {
+
+    border:
+        1px solid var(--border);
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    margin: 15px 0;
+
+}
+
+
+.quiz-question h3 {
+
+    margin-top: 0;
+
+}
+
+
+.option {
+
+    display: block;
+
+    padding: 10px;
+
+    margin: 7px 0;
+
+    border-radius: 9px;
+
+    background: #f7f8fc;
+
+}
+
+
+.option input {
+
+    margin-right: 8px;
+
+}
+
+
+.correct {
+
+    border:
+        2px solid var(--success);
+
+    background: #effaf5;
+
+}
+
+
+.wrong {
+
+    border:
+        2px solid var(--danger);
+
+    background: #fff2f0;
+
+}
+
+
+#score {
+
+    font-weight: bold;
+
+    color: var(--primary);
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+footer {
+
+    text-align: center;
+
+    color: var(--muted);
+
+    padding: 25px;
+
+}
+
+
+@media (max-width: 700px) {
+
+    h1 {
+
+        font-size: 45px;
+
+    }
+
+    .status {
+
+        position: static;
+
+        display: inline-block;
+
+        margin-top: 20px;
+
+    }
+
+    .card {
+
+        padding: 18px;
+
+    }
+
+}
